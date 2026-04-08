@@ -1,0 +1,278 @@
+/* Explore — Figma node 7567-17429, tokens from @henrique-menezzo/dailywire-ds */
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 393px;
+  min-height: 100svh;
+  margin: 0 auto;
+  background: var(--color-background-neutral-bold-default);
+  color: var(--color-text-neutral-bold-default);
+  box-shadow:
+    0 0 0 1px var(--color-border-neutral-subtle-default),
+    0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 420px) {
+  .phone {
+    box-shadow: none;
+    max-width: 100%;
+  }
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status bar */
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  min-height: 59px;
+  padding: 0 var(--spacing-lg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: color-mix(
+    in srgb,
+    var(--color-background-neutral-bold-default) 88%,
+    transparent
+  );
+  border-bottom: 1px solid var(--color-border-neutral-subtle-default);
+}
+
+.statusTime {
+  font-size: var(--font-size-md);
+  font-weight: var(--Bold);
+  letter-spacing: -0.4px;
+  color: var(--color-text-neutral-bold-default);
+  min-width: 3rem;
+}
+
+.themeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.themeBtn {
+  font-family: inherit;
+  font-size: var(--font-size-xxs);
+  font-weight: var(--Semibold);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border-neutral-bold-default);
+  background: var(--color-background-neutral-subtle-default);
+  color: var(--color-text-neutral-bold-default);
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.themeBtn:hover {
+  background: var(--color-background-neutral-subtle-hovered);
+}
+
+.themeBtn[aria-pressed='true'] {
+  background: var(--color-background-brand-bold-default);
+  border-color: var(--color-background-brand-bold-default);
+  color: var(--color-text-inverse-bold-default);
+}
+
+.statusSpacer {
+  width: 3rem;
+  flex-shrink: 0;
+}
+
+/* Top nav */
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  gap: var(--spacing-md);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.navIcons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  min-height: 40px;
+  padding: var(--spacing-md);
+}
+
+/* Chips row — Figma horizontal filters */
+.chipsRow {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--spacing-md);
+  padding: var(--spacing-3xl) var(--spacing-lg) 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chipsRow::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 var(--spacing-xl);
+  border-radius: var(--border-radius-full);
+  border: 1px solid var(--color-border-neutral-bold-default);
+  background: transparent;
+  color: var(--color-text-neutral-bold-default);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--Regular);
+  line-height: var(--line-height-18);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.chip:hover {
+  background: var(--color-background-neutral-subtle-default);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-focus-neutral-bold-default);
+  outline-offset: 2px;
+}
+
+/* Latest Episodes */
+.section {
+  padding: var(--spacing-6xl) var(--spacing-lg) 0;
+}
+
+.sectionTitle {
+  margin: 0 0 var(--spacing-3xl);
+  font-size: var(--font-size-md);
+  font-weight: var(--Semibold);
+  line-height: var(--line-height-22);
+  color: var(--color-text-neutral-bold-default);
+}
+
+.cardsRow {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  padding: 0 var(--spacing-lg) var(--spacing-4xl);
+  scrollbar-width: thin;
+}
+
+.cardsRow > * {
+  flex-shrink: 0;
+}
+
+/* Tab bar */
+.tabBar {
+  flex-shrink: 0;
+  background: var(--color-background-neutral-bold-default);
+  border-top: 1px solid var(--color-border-neutral-subtle-default);
+  padding: 0 var(--spacing-xl);
+}
+
+.tabBarInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 393px;
+  margin: 0 auto;
+}
+
+.tabItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md) var(--spacing-3xl);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+.tabItem:focus-visible {
+  outline: 2px solid var(--color-focus-neutral-bold-default);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-neutral-subtlest-default);
+}
+
+.tabIconActive {
+  color: var(--color-text-neutral-bold-default);
+}
+
+.tabLabel {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--Regular);
+  line-height: 1.5;
+  color: var(--color-text-neutral-subtlest-default);
+}
+
+.tabLabelActive {
+  color: var(--color-text-neutral-bold-default);
+}
+
+.profileAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius-full);
+  background: var(--color-background-always-dark);
+  border: 1px solid var(--color-border-neutral-bold-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: var(--Bold);
+  color: var(--color-text-inverse-bold-default);
+}
+
+.homeIndicator {
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--spacing-md);
+}
+
+.homeIndicatorBar {
+  width: 139px;
+  height: 5px;
+  border-radius: var(--border-radius-full);
+  background: var(--color-background-inverse-bold-default);
+  opacity: 0.9;
+}

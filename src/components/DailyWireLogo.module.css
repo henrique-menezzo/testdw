@@ -1,0 +1,7 @@
+.root {
+  display: block;
+  height: 18px;
+  width: auto;
+  max-width: 100%;
+  color: var(--color-text-neutral-bold-default);
+}
