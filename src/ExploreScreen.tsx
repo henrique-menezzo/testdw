@@ -48,7 +48,7 @@ export function ExploreScreen({ theme, onThemeChange }: ExploreScreenProps) {
               aria-pressed={theme === 'light'}
               onClick={() => onThemeChange('light')}
             >
-              Claro
+              Light
             </button>
             <button
               type="button"
@@ -56,7 +56,7 @@ export function ExploreScreen({ theme, onThemeChange }: ExploreScreenProps) {
               aria-pressed={theme === 'dark'}
               onClick={() => onThemeChange('dark')}
             >
-              Escuro
+              Dark
             </button>
           </div>
           <span className={styles.statusSpacer} aria-hidden />
